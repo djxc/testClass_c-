@@ -13,6 +13,8 @@ class Line
 	public:
 		Line(Point sp,Point ed);
 		void showLine();
+		int isLine_cross(Point p21, Point p22);
+		void type_cross(int type);
 };
 
 #endif 

@@ -1,6 +1,7 @@
 #include<iostream>
 #include "src/point.h"
 #include "src/line.h"
+#include "src/point_fun.h"
 #include "src/JMap.h"
 
 using namespace std;
@@ -21,9 +22,16 @@ int main(int argc, char *argv[])
 	//type_cross(is_cross);
 	JMap map;
 	map.dj();
-	map.show(argc, argv);
-	Point p1(10.0, 20.0), p2(15.0, 10.0), p3(13.0, 10.0), p4(20.0, 20.0);
-	Line l1(p1, p2);
+	Point p1(10.0, 20.0), p2(15.0, 10.0), p3(13.0, 10.0), p4(20.0, 20.0),
+	p5(15.0, 20.0);
+	Line l1(p1, p4);
+	
+	//对于点几何的操作
+	point_fun pf;
+	double pm = pf.PointMult(p1, p4);
+	cout << pm << endl;
+	pf.isPointonLine(p5, l1);	//判断点是否在线段上
+
 	l1.showLine();
 	int type = l1.isLine_cross(p3, p4);
 	l1.type_cross(type);
@@ -31,5 +39,7 @@ int main(int argc, char *argv[])
 	cout << "y:" << p1.getY() << endl;
 
 	cout << "I am dj!" << endl;
+	map.show(argc, argv);
+	
 	return 0;
 }

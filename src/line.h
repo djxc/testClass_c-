@@ -7,7 +7,7 @@ class Point;
 
 class Line
 {
-	private:
+	public:
 		Point start_p, end_p;
 
 	public:

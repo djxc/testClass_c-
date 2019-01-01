@@ -1,0 +1,16 @@
+#include "Student.h"
+#include<string>
+
+using namespace std;
+Student::Student()
+{
+    this -> R = 1.5;
+}
+Student::Student(int b)
+{
+    this -> R = b;
+}
+void Student::study(int a)
+{
+    
+}
